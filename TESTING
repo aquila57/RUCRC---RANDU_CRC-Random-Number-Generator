@@ -8,6 +8,9 @@ feed the output from rucrcraw into those test suites.
 Run qmatch to verify the period length of the rucrc
 random number generator.  There is no parameter.
 
+This qmatch test uses the same algorithm as the template
+test in the Template Test repository.
+
 ./qmatch
 
 Press 'q' to quit.

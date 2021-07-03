@@ -5,16 +5,16 @@ RANDU random number algorithm, the CCITT 32-bit CRC algorithm,
 and a Bays-Durham shuffle.
 
 The period length of the standard RANDU random number generator
-is 2^31 generations.  The period length of a 32-bit CRC is 2^32
+is 2^30 generations.  The period length of a 32-bit CRC is 2^32
 generations.  With the Bays-Durham shuffle, the period length of
 rucrc approximates 1.2 * 10^61036 generations.
 
 The RANDU random number generator is very weak, and its period
 length quite short.  RANDU fails the visual 3D test badly.
 However, combined with a 32-bit CRC and the Bays-Durham
-shuffle, rucrc passes the dieharder test as well as taus2
-and the Mersenne Twister 19937.  It performs as fast as the
-Mersenne Twister.
+shuffle, rucrc passes the dieharder test, as well as taus2
+and the Mersenne Twister 19937 do.  It performs as fast as
+the Mersenne Twister 19937.
 
 The tests in this repository go beyond the dieharder suite
 of tests.  In this repository, there are visual tests, not
@@ -24,17 +24,17 @@ be tested, in comparison to a wide variety of other random
 number generators.
 
 The template test in this repository is different from the
-template test in dieharder.  The template test used here
-is based on a random pattern.  Each time the test is run
-the pattern changes.  The main way to cause the template test
-to fail, is to duplicate the input data.  The template test
-fails, when the template is repeated in its entirety.  Of course,
-if the input data is not random, the template test also
-fails the chi square test predictably.  Read more about
-the template test in TESTING.
+template test in dieharder.  The template test used here,
+called qmatch, is based on a random pattern.  Each time the
+test is run the pattern changes.  The main way to cause the
+template test to fail, is to duplicate the input data.  The
+template test fails, when the template is repeated in its
+entirety.  Of course, if the input data is not random, the
+template test also fails the chi square test predictably.
+Read more about the template test in TESTING, under qmatch.
 
 Almost all other random number test suites shy away from
-running Monte Carlo tests.  Seversl Monte Carlo tests are
+running Monte Carlo tests.  Several Monte Carlo tests are
 included in this repository.  The results of Mersenne
 Twister and ranlxd2 are compared to the results of this
 generator.  The results of all three generators are very

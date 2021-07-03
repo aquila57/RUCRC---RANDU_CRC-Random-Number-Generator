@@ -24,5 +24,6 @@ make -f poischi.mak
 make -f pwrball.mak
 make -f qmatch.mak
 make -f ranwlk.mak
+make -f tstprm.mak
 make -f tstrucrc.mak
 make -f uintchi.mak

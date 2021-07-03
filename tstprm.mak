@@ -1,5 +1,5 @@
 #  tstprm.mak - Compile tstprm.c Version 0.1.0
-#  Copyright (C) 2020 aquila57 at github.com
+#  Copyright (C) 2021 aquila57 at github.com
 
 #  This program is free software; you can redistribute it and/or
 #  modify it under the terms of the GNU General Public License as
@@ -24,9 +24,9 @@ CC=gcc
 
 CFLAGS=-c -Wall -O2
 
-LDFLAGS=-L. -letaus -lm
+LDFLAGS=-L. -lrucrc -lm
 
-tstprm:				$(OBJ)
+tstprm:				$(OBJ) librucrc.a
 		$(CC) -Wall -O2 $(OBJ) -o tstprm $(LDFLAGS)
 
 tstprm.o:			tstprm.c

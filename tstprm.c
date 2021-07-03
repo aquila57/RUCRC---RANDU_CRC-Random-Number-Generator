@@ -1,5 +1,5 @@
-/* tstprm.c - test etausprm subroutine  Version 0.1.0                */
-/* Copyright (C) 2020 aquila57 at github.com                         */
+/* tstprm.c - test rucrcprm subroutine  Version 0.1.0                */
+/* Copyright (C) 2021 aquila57 at github.com                         */
 
 /* This program is free software; you can redistribute it and/or     */
 /* modify it under the terms of the GNU General Public License as    */
@@ -19,13 +19,13 @@
    /* Boston, MA 02111-1307, USA.                                    */
 
 #include <stdio.h>
-#include "etaus.h"
+#include "rucrc.h"
 
 int main(void)
    {
-   unsigned int lst[8];    /* array of 3 prime numbers */
-   etausprm(lst);          /* test etausprm subroutine */
+   unsigned int seed;      /* 1 prime numbers */
+   seed = rucrcprm();      /* test rucrcprm subroutine */
    /* print results of test */
-   printf("%d %d %d\n", lst[0], lst[1], lst[2]); 
+   printf("%d\n", seed);
    return(0);
    } /* main */

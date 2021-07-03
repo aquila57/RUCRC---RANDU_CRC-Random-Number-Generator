@@ -66,13 +66,6 @@ rufmt *rucrcstrt(unsigned int seed)
    /***************************************************/
    /* Randomize the seeds and states                  */
    /***************************************************/
-   /* initialize the RANDU states to parameter        */
-   if (seed < 1 || seed > 4000000000)
-      {
-      fprintf(stderr,"rucrcstrt: seed %u "
-         "is invalid\n", seed);
-      exit(1);
-      } /* invalid seed */
    ru->seed = seed;   /* initialize seed to parameter      */
    ru->crc  = MASK;            /* set to all f's     */
    bldcrctbl(ru->crctbl);

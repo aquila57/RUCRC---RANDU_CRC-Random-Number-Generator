@@ -1,0 +1,23 @@
+Installing rucrc:
+
+Make shell scripts executable.
+
+chmod 755 *.sh
+
+Next compile the programs.
+
+./inst.sh
+
+To de-install rucrc:
+
+./deinst.sh
+
+If you make any changes to the rucrc library,
+
+./deinst.sh
+./inst.sh
+
+To see how to test rucrc, read TESTING.
+Some of these test programs use new curses, X Windows,
+and dieharder.
+
